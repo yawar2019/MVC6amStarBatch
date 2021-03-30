@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MVC6amStarBatch.Controllers
 {
+    //commented
     [RoutePrefix("Hyderabad")]
     public class NewController : Controller
     {
