@@ -89,5 +89,50 @@ namespace MVC6amStarBatch.Controllers
 
             return View();
         }
+
+        public ActionResult SendObjectViewModel()
+        {
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1211;
+            obj.EmpName = "Shaik";
+            obj.EmpSalary = 90000;
+
+            return View(obj);
+        }
+
+        public ActionResult SendMultipleObjectViewModel()
+        {
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1211;
+            obj.EmpName = "Shaik";
+            obj.EmpSalary = 90000;
+
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 1212;
+            obj1.EmpName = "Divya";
+            obj1.EmpSalary = 290000;
+
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 1213;
+            obj2.EmpName = "Anjum";
+            obj2.EmpSalary = 390000;
+
+            EmployeeModel obj3 = new EmployeeModel();
+            obj3.EmpId = 1214;
+            obj3.EmpName = "vasantha";
+            obj3.EmpSalary = 490000;
+
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+            listObj.Add(obj3);
+
+
+           
+
+            return View(listObj);
+        }
     }
 }

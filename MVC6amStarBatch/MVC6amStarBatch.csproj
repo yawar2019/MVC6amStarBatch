@@ -156,6 +156,8 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\New\SendObject.cshtml" />
     <Content Include="Views\New\SendMultipleObject.cshtml" />
+    <Content Include="Views\New\SendObjectViewModel.cshtml" />
+    <Content Include="Views\New\SendMultipleObjectViewModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
