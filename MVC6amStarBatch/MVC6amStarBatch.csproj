@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,6 +163,12 @@
     <Content Include="Views\New\SendMultipleObjectViewModel.cshtml" />
     <Content Include="Views\New\SendMultipleModel.cshtml" />
     <Content Include="Views\New\ShowEmployee.cshtml" />
+    <Content Include="Views\New\getMyView.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\New\getMyPartialView2.cshtml" />
+    <Content Include="Views\Shared\_myPartialView.cshtml" />
+    <Content Include="Views\New\getMyPartialView3.cshtml" />
+    <Content Include="Views\Shared\_myPartialView3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

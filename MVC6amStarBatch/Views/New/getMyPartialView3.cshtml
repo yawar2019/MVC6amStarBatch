@@ -1,0 +1,24 @@
+﻿@model List<MVC6amStarBatch.Models.EmployeeModel>
+@{
+    ViewBag.Title = "getMyPartialView3";
+}
+
+<h2>getMyPartialView3</h2>
+
+@{
+
+    var s = Html.Partial("_myPartialView3", Model);
+    int a = 20;
+    if (a == 10)
+    {
+
+        @s
+    }
+
+        }<br /><br />
+
+@{
+
+  Html.RenderPartial("_myPartialView3", Model);
+    
+    }

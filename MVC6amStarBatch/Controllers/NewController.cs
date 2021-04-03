@@ -221,5 +221,77 @@ namespace MVC6amStarBatch.Controllers
 
             return View(emp);
         }
+
+        public ViewResult getMyView(int ? id) {
+
+            return View();
+        }
+
+        public RedirectResult RedirecttoGoogle()
+        {
+            return Redirect("https://www.google.com/search?q=googlebooks&sxsrf=ALeKk01NsOH8TYefBOK0y2pHWnpeZsNDVA%3A1617325545217&source=hp&ei=6W1mYL2jC9Ov9QOr7aGwCQ&iflsig=AINFCbYAAAAAYGZ7-cLYu1bLIiKL_iGAEZwC60xMkaMY&oq=googlebooks&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAo6BwgjEOoCECc6CAgAELEDEIMBOgUIABCxAzoICC4QsQMQgwE6BAgjECc6CwgAELEDEIMBEMkDOgUIABCSAzoCCAA6BAguEApQv-8VWL6DFmD5iRZoAXAAeAGAAbQCiAH7D5IBBzAuNy4zLjGYAQCgAQGqAQdnd3Mtd2l6sAEK&sclient=gws-wiz&ved=0ahUKEwj9u-2Ur97vAhXTV30KHat2CJYQ4dUDCAc&uact=5");
+        }
+
+        public RedirectResult RedirecttoLocalMethod(int? id)
+        {
+            return Redirect("~/New/getMyView?id="+id);
+        }
+
+        public RedirectToRouteResult GoToRoute()
+        {
+            return RedirectToRoute("Default1");
+        }
+        public RedirectToRouteResult GoToRoute1()
+        {
+            return RedirectToAction("SendMultipleModel");
+        }
+        public RedirectToRouteResult GoToRoute2()
+        {
+            return RedirectToAction("index","default",new {id=1211});
+        }
+        public RedirectToRouteResult GoToRoute3()
+        {
+            return RedirectToAction("index", "default" );
+        }
+
+        public ViewResult getMyPartialView2()
+        {
+
+            return View();
+        }
+
+        public ViewResult getMyPartialView3()
+        {
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1211;
+            obj.EmpName = "Shaik";
+            obj.EmpSalary = 90000;
+
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 1212;
+            obj1.EmpName = "Divya";
+            obj1.EmpSalary = 290000;
+
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 1213;
+            obj2.EmpName = "Anjum";
+            obj2.EmpSalary = 390000;
+
+            EmployeeModel obj3 = new EmployeeModel();
+            obj3.EmpId = 1214;
+            obj3.EmpName = "vasantha";
+            obj3.EmpSalary = 490000;
+
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+            listObj.Add(obj3);
+
+
+
+            return View(listObj);
+        }
     }
 }
