@@ -293,5 +293,79 @@ namespace MVC6amStarBatch.Controllers
 
             return View(listObj);
         }
+
+        public ContentResult getmeContent(int? id) {
+            if (id == 1) {
+                return Content("Hello World");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style=color:red>hope Everything is well</p>");
+            }
+            else if (id == 3)
+            {
+                return Content("<userDetails><user><userId>1</userId><userName>james</userName><user></userDetails>");
+            }
+            else
+            {
+                return Content("<script>alert('Hi To All')</script>");
+            }
+
+        }
+
+        public FileResult getmefile() {
+
+            return File("~/Web.config","text/plain");
+        }
+        public FileResult getmefile2()
+        {
+
+            return File("~/Web.config", "application/xml");
+        }
+        public FileResult getmefile3()
+        {
+
+            return File("~/ActionResult.pdf", "application/pdf");
+        }
+        public FileResult getmefile4()
+        {
+
+            return File("~/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
+        }
+
+        public JsonResult ShowEmployeeInJson()
+        {
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1211;
+            obj.EmpName = "Shaik";
+            obj.EmpSalary = 90000;
+
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 1212;
+            obj1.EmpName = "Divya";
+            obj1.EmpSalary = 290000;
+
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 1213;
+            obj2.EmpName = "Anjum";
+            obj2.EmpSalary = 390000;
+
+            EmployeeModel obj3 = new EmployeeModel();
+            obj3.EmpId = 1214;
+            obj3.EmpName = "vasantha";
+            obj3.EmpSalary = 490000;
+
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+            listObj.Add(obj3);
+
+
+            
+
+            return Json(listObj,JsonRequestBehavior.AllowGet);
+        }
     }
 }
