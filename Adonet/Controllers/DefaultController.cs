@@ -14,5 +14,16 @@ namespace Adonet.Controllers
         {
             return View(db.GetEmployees());
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(string EmpName,int EmpSalary)
+        {
+            return View();
+        }
     }
 }
