@@ -21,9 +21,64 @@ namespace Adonet.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(string EmpName,int EmpSalary)
+        public ActionResult Create(EmployeeModel e)
         {
-            return View();
+            int i = db.saveEmployee(e);
+            if (i > 0)
+            {
+                return RedirectToAction("index");
+            }
+            else
+            {
+                return View();
+            }
+            
+        }
+
+
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            EmployeeModel emp = db.GetEmployeeById(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel e)
+        {
+            int i = db.EditEmployee(e);
+            if (i > 0)
+            {
+                return RedirectToAction("index");
+            }
+            else
+            {
+                return View();
+            }
+
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.GetEmployeeById(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            int i = db.Delete(id);
+            if (i > 0)
+            {
+                return RedirectToAction("index");
+            }
+            else
+            {
+                return View();
+            }
+
         }
     }
 }
