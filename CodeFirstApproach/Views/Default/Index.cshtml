@@ -1,0 +1,22 @@
+﻿@model List<CodeFirstApproach.Models.EmployeeModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var items in Model)
+    {
+    <tr>
+        <td>@items.EmpId</td>
+        <td>@items.EmpName</td>
+        <td>@items.EmpSalary</td>
+    </tr>
+    }
+</table>

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC6amStarBatch", "MVC6amSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adonet", "Adonet\Adonet.csproj", "{79021177-223D-4795-BC3B-3B04E5F6C7A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "DatabaseApproach\DatabaseApproach.csproj", "{305B6DD6-E878-4720-97E8-8D236DFBFEFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{1687EFC3-4680-46D1-B557-7846FE72ACD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{79021177-223D-4795-BC3B-3B04E5F6C7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79021177-223D-4795-BC3B-3B04E5F6C7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79021177-223D-4795-BC3B-3B04E5F6C7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305B6DD6-E878-4720-97E8-8D236DFBFEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305B6DD6-E878-4720-97E8-8D236DFBFEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305B6DD6-E878-4720-97E8-8D236DFBFEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305B6DD6-E878-4720-97E8-8D236DFBFEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1687EFC3-4680-46D1-B557-7846FE72ACD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1687EFC3-4680-46D1-B557-7846FE72ACD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1687EFC3-4680-46D1-B557-7846FE72ACD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1687EFC3-4680-46D1-B557-7846FE72ACD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
