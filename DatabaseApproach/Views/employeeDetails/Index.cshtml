@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DatabaseApproach.Models.employeeDetail>
+﻿@model IEnumerable<DatabaseApproach.Models.EmpDept>
 
 @{
     ViewBag.Title = "Index";
@@ -12,16 +12,16 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.EmpId)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.EmpName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EmpSalary)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DeptId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Designation)
+            @Html.DisplayNameFor(model => model.DeptName)
         </th>
         <th></th>
     </tr>
@@ -29,21 +29,21 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.EmpId)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.EmpName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EmpSalary)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DeptId)
+            @Html.DisplayFor(modelItem => item.DeptName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Designation)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmpId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EmpId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EmpId })
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }
