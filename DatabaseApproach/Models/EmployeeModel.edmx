@@ -22,6 +22,7 @@
           <Property Name="EmpSalary" Type="int" />
           <Property Name="DeptId" Type="int" />
           <Property Name="Designation" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="EmployeeModelStoreContainer">
           <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
@@ -40,6 +41,7 @@
           <Property Name="EmpSalary" Type="Int32" />
           <Property Name="DeptId" Type="Int32" />
           <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="EmployeeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="employeeDetails" EntityType="Self.employeeDetail" />
@@ -62,6 +64,7 @@
           <EntitySetMapping Name="employeeDetails">
             <EntityTypeMapping TypeName="EmployeeModel.employeeDetail">
               <MappingFragment StoreEntitySet="employeeDetails">
+                <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="EmpId" ColumnName="EmpId" />
                 <ScalarProperty Name="EmpName" ColumnName="EmpName" />
                 <ScalarProperty Name="EmpSalary" ColumnName="EmpSalary" />

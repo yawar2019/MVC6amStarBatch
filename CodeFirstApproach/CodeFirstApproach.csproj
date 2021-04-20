@@ -199,12 +199,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104150117418_InitialCreate.cs" />
+    <Compile Include="Migrations\202104150117418_InitialCreate.designer.cs">
+      <DependentUpon>202104150117418_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150123228_InitialCreate2.cs" />
+    <Compile Include="Migrations\202104150123228_InitialCreate2.designer.cs">
+      <DependentUpon>202104150123228_InitialCreate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150126183_InitialCreate3.cs" />
+    <Compile Include="Migrations\202104150126183_InitialCreate3.designer.cs">
+      <DependentUpon>202104150126183_InitialCreate3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EmployeeContext.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104150117418_InitialCreate.resx">
+      <DependentUpon>202104150117418_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150123228_InitialCreate2.resx">
+      <DependentUpon>202104150123228_InitialCreate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150126183_InitialCreate3.resx">
+      <DependentUpon>202104150126183_InitialCreate3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

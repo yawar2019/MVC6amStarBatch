@@ -80,5 +80,11 @@ namespace Adonet.Controllers
             }
 
         }
+
+        public ActionResult HtmlHelper() {
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpName = "Anjum";
+            return View(obj);
+        }
     }
 }

@@ -1,0 +1,40 @@
+﻿@model Adonet.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelper";
+}
+<script>
+    function fun() {
+        alert('Welcome to News Channel');
+    }
+</script>
+
+<h2>HtmlHelper</h2>
+@Html.TextBox("FirstName","Divya",new { style = "background-color:skyblue",@class="form-control",id="txtFirstName", onclick = "fun()" })<br />
+<input type="text" name="EmpName" value="Deepali" style="background-color:pink" class="form-control" onclick="fun()" /><br />
+@Html.TextBoxFor(s=>s.EmpName)
+
+@Html.LabelFor(s=>s.EmpName)<br />
+
+@Html.EditorFor(s=>s.status)
+
+
+<br />
+
+<br />
+@Html.EditorForModel(Model)
+
+@Html.Password("pwd","tiktok");<br />
+@Html.CheckBox("java",true)<br />
+<span>Male</span>@Html.RadioButton("Gender", "Male")
+<span>Female</span>@Html.RadioButton("Gender", "FeMale",true)
+<span>Others</span>@Html.RadioButton("Gender", "Other")<br />
+
+@Html.DropDownList("Country",new List<SelectListItem>(){
+
+    new SelectListItem { Text="India",Value="India"},
+    new SelectListItem { Text="Pakistan",Value="Pakistan"},
+    new SelectListItem { Text="China",Value="China"},
+
+})
+
+
